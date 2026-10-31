@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Our Crops</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f7f3e8;
+}
+
+/* OUR CROPS SECTION */
+.crops {
+    padding: 45px 5%;
+}
+
+/* TOP AREA */
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.title h1 {
+    font-family: Georgia, serif;
+    font-size: 40px;
+    color: #174d32;
+}
+
+.title p {
+    color: #666;
+    margin-top: 8px;
+}
+
+/* CATEGORY BUTTONS */
+.categories {
+    display: flex;
+    gap: 12px;
+}
+
+.categories button {
+    border: none;
+    background: transparent;
+    padding: 12px 20px;
+    border-radius: 25px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.categories button:hover {
+    background: #e4eadf;
+}
+
+.categories .active {
+    background: #176b3a;
+    color: white;
+}
+
+/* CROP GRID */
+.crop-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+/* CARD */
+.crop-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+    transition: 0.3s;
+}
+
+.crop-card:hover {
+    transform: translateY(-6px);
+}
+
+/* IMAGE */
+.crop-card img {
+    width: 100%;
+    height: 175px;
+    object-fit: cover;
+}
+
+/* INFORMATION */
+.crop-info {
+    text-align: center;
+    padding: 17px 12px 20px;
+}
+
+.crop-info h2 {
+    font-family: Georgia, serif;
+    color: #245333;
+    font-size: 21px;
+}
+
+.line {
+    width: 35px;
+    height: 3px;
+    background: #d3a52b;
+    margin: 9px auto;
+}
+
+.crop-info p {
+    color: #666;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* RESPONSIVE */
+@media(max-width: 1000px) {
+    .crop-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+}
+
+@media(max-width: 600px) {
+    .crop-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .categories {
+        flex-wrap: wrap;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<section class="crops">
+
+    <!-- TITLE AND CATEGORIES -->
+    <div class="top">
+
+        <div class="title">
+            <h1>Nature's Best</h1>
+            <p>Healthy crops, healthy people, a healthier tomorrow.</p>
+        </div>
+
+        <div class="categories">
+
+
+            <button class="active"
+                    onclick="showCrop('all', this)">
+                All Crops
+            </button>
+
+            <button onclick="showCrop('cereal', this)">
+                Cereals
+            </button>
+
+            <button onclick="showCrop('vegetable', this)">
+                Vegetables
+            </button>
+
+            <button onclick="showCrop('cash', this)">
+                Cash Crops
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- CROP CARDS -->
+    <div class="crop-container">
+
+        <!-- WHEAT -->
+        <div class="crop-card cereal">
+            <img src="wheat.jpg" alt="Wheat">
+
+            <div class="crop-info">
+                <h2>Wheat</h2>
+                <div class="line"></div>
+                <p>
+                    Nutritious, high-yielding and a staple
+                    crop for a healthier tomorrow.
+                </p>
+            </div>
+        </div>
+
+
+        <!-- RICE -->
+        <div class="crop-card cereal">
+            <img src="r.jpg" alt="Rice">
+
+            <div class="crop-info">
+                <h2>Rice</h2>
+                <div class="line"></div>
+                <p>
+                    Rich in nutrition, feeding families
+                    across generations.
+                </p>
+            </div>
+        </div>
+
+
+        <!-- MAIZE -->
+        <div class="crop-card cereal">
+            <img src="mm1.jpg" alt="Maize">
+
+            <div class="crop-info">
+                <h2>Maize</h2>
+                <div class="line"></div>
+                <p>
+                    High energy, high value, a key crop
+                    for a stronger future.
+                </p>
+            </div>
+        </div>
+
+
+        <!-- TOMATO -->
+        <div class="crop-card vegetable">
+            <img src="tt1.jpg" alt="Tomato">
+
+            <div class="crop-info">
+                <h2>Tomato</h2>
+                <div class="line"></div>
+                <p>
+                    Fresh, flavourful and full of
+                    goodness from our fields.
+                </p>
+            </div>
+        </div>
+
+
+        <!-- COTTON -->
+        <div class="crop-card cash">
+            <img src="cotton.jpg" alt="Cotton">
+
+            <div class="crop-info">
+                <h2>Cotton</h2>
+                <div class="line"></div>
+                <p>
+                    Soft fibres, strong livelihoods,
+                    sustainable growth.
+                </p>
+            </div>
+        </div>
+
+
+        <!-- SUGARCANE -->
+        <div class="crop-card cash">
+            <img src="ss1.jpg" alt="Sugarcane">
+
+            <div class="crop-info">
+                <h2>Sugarcane</h2>
+                <div class="line"></div>
+                <p>
+                    Natural sweetness, powering
+                    a better future.
+                </p>
+            </div>
+        </div>
+
+
+        <!-- MILLETS -->
+        <div class="crop-card cereal">
+            <img src="me1.jpg" alt="Millets">
+
+            <div class="crop-info">
+                <h2>Millets</h2>
+                <div class="line"></div>
+                <p>
+                    Nutritious grains supporting
+                    healthy and sustainable farming.
+                </p>
+            </div>
+        </div>
+
+
+        <!-- POTATO -->
+        <div class="crop-card vegetable">
+            <img src="pp1.jpg" alt="Potato">
+
+            <div class="crop-info">
+                <h2>Potato</h2>
+                <div class="line"></div>
+                <p>
+                    A versatile vegetable crop
+                    grown for everyday food.
+                </p>
+            </div>
+        </div>
+
+
+        <!-- GROUNDNUT -->
+        <div class="crop-card cash">
+            <img src="gg.jpg" alt="Groundnut">
+
+            <div class="crop-info">
+                <h2>Groundnut</h2>
+                <div class="line"></div>
+                <p>
+                    A valuable oilseed crop rich
+                    in protein and nutrients.
+                </p>
+            </div>
+        </div>
+
+
+        <!-- PULSES -->
+        <div class="crop-card cereal">
+            <img src="pp.jpg" alt="Pulses">
+
+            <div class="crop-info">
+                <h2>Pulses</h2>
+                <div class="line"></div>
+                <p>
+                    Protein-rich crops supporting
+                    healthy diets.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<script>
+
+function showCrop(category, button) {
+
+    /* Active button */
+    let buttons = document.querySelectorAll(".categories button");
+
+    buttons.forEach(function(btn) {
+        btn.classList.remove("active");
+    });
+
+    button.classList.add("active");
+
+
+    /* Crop cards */
+    let cards = document.querySelectorAll(".crop-card");
+
+    cards.forEach(function(card) {
+
+        if (category == "all") {
+            card.style.display = "block";
+        }
+
+        else if (card.classList.contains(category)) {
+            card.style.display = "block";
+        }
+
+        else {
+            card.style.display = "none";
+        }
+
+    });
+
+}
+
+</script>
+
+</body>
+</html>
