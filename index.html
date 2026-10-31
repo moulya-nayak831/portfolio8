@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>U02KN25S0026</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #164d2d;
+    background: #f7fbf3;
+}
+
+/* ================= HEADER ================= */
+
+header {
+    height: 82px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 6%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    position: relative;
+    z-index: 10;
+}
+.navbar {
+    height: 92px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo {
+    font-size: 32px;
+    color: #0d513b;
+    font-family: Georgia, serif;
+    font-weight: bold;
+align-items:center;
+}
+
+.logo span {
+    color: #b88a18;
+}
+
+.tagline {
+    font-size: 14px;
+    color: #777;
+    margin-top: 3px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 38px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #153d31;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.nav-links a.active {
+    color: #1d6b38;
+    border-bottom: 3px solid #28743c;
+    padding-bottom: 10px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-icon {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background: linear-gradient( #3d9b43 100% 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.logo-icon::before {
+    
+    position: absolute;
+    font-size: 45px;
+    color: #f4bd18;
+    left: 8px;
+    top: -10px;
+}
+
+.logo-icon::after {
+    content: "🌱";
+    position: absolute;
+    font-size: 34px;
+    bottom: -3px;
+    left: 15px;
+}
+
+.logo-text h1 {
+    font-family: Georgia, serif;
+    font-size: 24px;
+    line-height: 22px;
+    color: #12532e;
+}
+
+.logo-text h1 span {
+    color: #c49b18;
+}
+
+.logo-text p {
+    font-size: 10px;
+    color: #555;
+    margin-top: 5px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+nav a:hover,
+nav a.active {
+    color: #16733d;
+}
+
+nav a.active {
+    border-bottom: 3px solid #168243;
+    padding-bottom: 8px;
+}
+
+.search {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: #f0f6ed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.touch-btn {
+    background: #116b32;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+    min-height: 330px;
+    background:
+        linear-gradient(90deg, rgba(0,45,20,.72), rgba(0,0,0,.08)),
+        url("https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1600&q=80");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 50px 7%;
+    color: white;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.small-title {
+    font-size: 13px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    margin-bottom: 14px;
+}
+
+.hero h2 {
+    font-family: Georgia, serif;
+    font-size: 48px;
+    line-height: 1.05;
+    margin-bottom: 15px;
+}
+
+.hero h2 span {
+    color: #c9ed65;
+    font-style: italic;
+}
+
+.hero p {
+    font-family: Georgia, serif;
+    font-size: 17px;
+    margin-bottom: 22px;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    padding: 11px 22px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.green-btn {
+    background: #19a34a;
+    color: white;
+}
+
+.outline-btn {
+    border: 2px solid white;
+    color: white;
+}
+
+/* ================= SECTION TITLE ================= */
+
+.section-title {
+    text-align: center;
+    padding-top: 25px;
+}
+
+.section-title h2 {
+    font-family: Georgia, serif;
+    font-size: 25px;
+    color: #16562f;
+}
+
+.section-title p {
+    color: #777;
+    font-size: 13px;
+    margin-top: 7px;
+}
+
+/* ================= WHY CHOOSE US ================= */
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 30px;
+    padding: 15px 8% 30px;
+    background: white;
+}
+
+.feature {
+    text-align: center;
+}
+
+.circle {
+    width: 62px;
+    height: 62px;
+    margin: auto;
+    border-radius: 50%;
+    background: #edf8df;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+}
+
+.feature h3 {
+    margin-top: 12px;
+    font-family: Georgia, serif;
+    font-size: 15px;
+}
+
+.feature p {
+    color: #777;
+    font-size: 12px;
+    line-height: 18px;
+    margin-top: 8px;
+}
+
+/* ================= CROPS ================= */
+
+.crops-section {
+    padding: 30px 5%;
+    background: #f2faec;
+}
+
+.crops-wrapper {
+    display: grid;
+    grid-template-columns: 270px 1fr;
+    gap: 25px;
+    align-items: center;
+}
+
+.crop-intro small {
+    color: #6a8d52;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.crop-intro h2 {
+    font-family: Georgia, serif;
+    font-size: 32px;
+    line-height: 1.05;
+    margin: 8px 0;
+}
+
+.crop-intro p {
+    color: #777;
+    font-size: 13px;
+    line-height: 19px;
+}
+
+.view-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 18px;
+    background: #176b39;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.crop-cards {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 12px;
+}
+
+.crop-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,.08);
+}
+
+.crop-card img {
+    width: 100%;
+    height: 125px;
+    object-fit: cover;
+}
+
+.crop-info {
+    padding: 10px;
+}
+
+.crop-info h3 {
+    font-size: 13px;
+}
+
+.crop-info p {
+    color: #777;
+    font-size: 11px;
+    margin-top: 5px;
+}
+
+/* ================= SUSTAINABLE ================= */
+
+.sustainable {
+    display: grid;
+    grid-template-columns: 43% 57%;
+    background: white;
+    align-items: center;
+}
+
+.sustainable-img {
+    height: 180px;
+    background:
+        linear-gradient(rgba(0,0,0,.1),rgba(0,0,0,.1)),
+        url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1000&q=85");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding-left: 45px;
+}
+
+.sustainable-img h2 {
+    color: white;
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 25px;
+    text-shadow: 2px 2px 5px #333;
+}
+
+.practice {
+    padding: 15px 35px;
+}
+
+.practice h2 {
+    font-family: Georgia, serif;
+    font-size: 22px;
+}
+
+.practice > p {
+    font-size: 12px;
+    color: #777;
+    margin: 5px 0 15px;
+}
+
+.practice-grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 10px;
+}
+
+.practice-item {
+    text-align: center;
+    border-right: 1px solid #ddd;
+}
+
+.practice-item:last-child {
+    border: none;
+}
+
+.practice-icon {
+    width: 50px;
+    height: 50px;
+    background: #edf8df;
+    border-radius: 50%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+.practice-item h3 {
+    font-family: Georgia, serif;
+    font-size: 12px;
+    margin-top: 8px;
+}
+
+.practice-item p {
+    font-size: 10px;
+    color: #777;
+    margin-top: 5px;
+    line-height: 15px;
+}
+
+/* ================= CTA ================= */
+
+.cta {
+    min-height: 70px;
+    background:
+        linear-gradient(rgba(10,80,30,.65),rgba(10,80,30,.65)),
+        url("https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=1600&q=85");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 8%;
+}
+
+.cta h2 {
+    font-family: Georgia, serif;
+    font-size: 18px;
+}
+
+.cta p {
+    font-size: 11px;
+    margin-top: 4px;
+}
+
+.cta a {
+    background: white;
+    color: #166437;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 22px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+    background: #064b2c;
+    color: white;
+    padding: 22px 7% 10px;
+}
+
+.footer-main {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1.3fr 1fr;
+    gap: 40px;
+}
+
+.footer-logo h2 {
+    font-family: Georgia, serif;
+    font-size: 22px;
+}
+
+.footer-logo h2 span {
+    color: #d3ac26;
+}
+
+.footer-logo p {
+    font-size: 9px;
+    margin-top: 5px;
+}
+
+footer h3 {
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+footer a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 11px;
+    line-height: 18px;
+}
+
+.contact p {
+    font-size: 11px;
+    line-height: 20px;
+}
+
+.social {
+    font-size: 20px;
+    letter-spacing: 7px;
+}
+
+.copyright {
+    border-top: 1px solid rgba(255,255,255,.3);
+    margin-top: 15px;
+    padding-top: 9px;
+    text-align: center;
+    font-size: 10px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:900px) {
+
+    nav {
+        display: none;
+    }
+
+    .features {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .crops-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .crop-cards {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .sustainable {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-main {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media(max-width:600px) {
+
+    header {
+        padding: 8px 4%;
+    }
+
+    .logo-text h1 {
+        font-size: 19px;
+    }
+
+    .logo-icon {
+        width: 52px;
+        height: 52px;
+    }
+
+    .touch-btn {
+        display: none;
+    }
+
+    .hero {
+        min-height: 420px;
+        padding: 40px 7%;
+    }
+
+    .hero h2 {
+        font-size: 38px;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .crop-cards {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .practice-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .practice-item {
+        border-bottom: 1px solid #ddd;
+        padding: 10px;
+    }
+
+    .cta {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+    <div class="logo">
+
+        <div class="logo-icon"></div>
+
+        <div class="logo-text">
+            <h1>Sunrise <span>GoldenFields</span></h1>
+            <p>Seeds of Success, Fields of Growth</p>
+        </div>
+
+    </div>
+
+    <nav>
+        <a href="index.html" class="active">Home</a>
+        <a href="About1.html">About Us</a>
+        <a href="crops.html">Our Crops</a>
+      
+        <a href="product.html">Products</a>
+        
+        <a href="Contact1.html">Contact</a>
+
+        
+
+        <a href="Contact1.html" class="touch-btn">🌿 Get In Touch</a>
+    </nav>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="small-title">
+            — AGRICULTURE FOR A BETTER TOMORROW 🌱
+        </div>
+
+        <h2>
+            Seeds of Success,<br>
+            <span>Fields of Growth</span>
+        </h2>
+
+        <p>
+            Healthy Soil &nbsp;·&nbsp; Healthy Crops &nbsp;·&nbsp;
+            A Greener Future
+        </p>
+
+        <div class="buttons">
+            <a href="crops.html" class="btn green-btn">Explore Our Farm →</a>
+            <a href="product.html" class="btn outline-btn">Our Products</a>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= WHY CHOOSE US ================= -->
+
+<div class="section-title">
+    <h2>🌿 Why Choose Us 🌿</h2>
+    <p>
+        We are committed to sustainable agriculture, quality produce
+        and a healthier planet.
+    </p>
+</div>
+
+<section class="features">
+
+    <div class="feature">
+        <div class="circle">🌿</div>
+        <h3>Sustainable Farming</h3>
+        <p>Healthy soil, healthy crops,<br>healthy future.</p>
+    </div>
+
+    <div class="feature">
+        <div class="circle">💧</div>
+        <h3>Smart Water Management</h3>
+        <p>Every drop counts<br>for a greener tomorrow.</p>
+    </div>
+
+    <div class="feature">
+        <div class="circle">🌱</div>
+        <h3>Quality Crops</h3>
+        <p>Pure, fresh and<br>naturally grown.</p>
+    </div>
+
+    <div class="feature">
+        <div class="circle">☀️</div>
+        <h3>Natural Farming</h3>
+        <p>Good for your health,<br>good for the earth.</p>
+    </div>
+
+</section>
+
+
+<!-- ================= OUR CROPS ================= -->
+
+<section class="crops-section">
+
+    <div class="crops-wrapper">
+
+        <div class="crop-intro">
+
+            <small>🌿 OUR CROPS</small>
+
+            <h2>
+                Nature's Best,<br>
+                For Your Tomorrow
+            </h2>
+
+            <p>
+                We grow a variety of high-quality crops to nourish
+                communities and build a sustainable future.
+            </p>
+
+            <a href="Crops.html" class="view-btn">View All Crops →</a>
+
+        </div>
+
+
+        <div class="crop-cards">
+
+            <div class="crop-card">
+                <img src="rice1.jpg">
+                <div class="crop-info">
+                    <h3>🌿 Rice</h3>
+                    <p>Staple for a healthier life</p>
+                </div>
+            </div>
+
+            <div class="crop-card">
+                <img src="https://images.unsplash.com/photo-1551754655-cd27e38d2076?auto=format&fit=crop&w=600&q=80">
+                <div class="crop-info">
+                    <h3>🌱 Maize</h3>
+                    <p>Fuel for a growing world</p>
+                </div>
+            </div>
+
+            <div class="crop-card">
+                <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=600&q=80">
+                <div class="crop-info">
+                    <h3>🥕 Vegetables</h3>
+                    <p>Freshness in every bite</p>
+                </div>
+            </div>
+
+            <div class="crop-card">
+                <img src="mm.jpg">
+                <div class="crop-info">
+                    <h3>🥭 Fruits</h3>
+                    <p>Nature's sweet gifts</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SUSTAINABLE PRACTICES ================= -->
+
+<section class="sustainable">
+
+    <div class="sustainable-img">
+        <h2>
+            Sustainable<br>
+            Today<br>
+            Stronger<br>
+            Tomorrow
+        </h2>
+    </div>
+
+    <div class="practice">
+
+        <h2>🌿 Our Sustainable Practices</h2>
+
+        <p>
+            We follow eco-friendly and innovative methods to protect
+            our land, resources and future.
+        </p>
+
+        <div class="practice-grid">
+
+            <div class="practice-item">
+                <div class="practice-icon">🌿</div>
+                <h3>Organic Farming</h3>
+                <p>Chemical-free,<br>naturally pure produce.</p>
+            </div>
+
+            <div class="practice-item">
+                <div class="practice-icon">🌱</div>
+                <h3>Soil Conservation</h3>
+                <p>Healthy soil for<br>long-term productivity.</p>
+            </div>
+
+            <div class="practice-item">
+                <div class="practice-icon">💧</div>
+                <h3>Water Conservation</h3>
+                <p>More crop per<br>drop.</p>
+            </div>
+
+            <div class="practice-item">
+                <div class="practice-icon">☀️</div>
+                <h3>Renewable Energy</h3>
+                <p>Clean energy for a<br>greener tomorrow.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CTA ================= -->
+
+<section class="cta">
+
+    <div>
+        <h2>🌱 Together We Grow</h2>
+        <p>Better Farms &nbsp; | &nbsp; Healthier Food &nbsp; | &nbsp; A Greener Planet</p>
+    </div>
+
+    <a href="Contact1.html">Contact Us →</a>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-main">
+
+        <div class="footer-logo">
+            <h2>
+                Sunrise <span>GoldenFields</span>
+            </h2>
+            <p>Seeds of Success, Fields of Growth</p>
+        </div>
+
+
+        <div>
+            <h3>Quick Links</h3>
+            <a href="index.html">Home</a>
+            <a href="About1.html">About Us</a>
+            <a href="crops.html">Our Crops</a>
+        
+            <a href="product.html">Products</a>
+            <a href="Contact1.html">Contact</a>
+        </div>
+
+
+        <div class="contact">
+            <h3>Contact Us</h3>
+            <p>📍 Green Valley Farm, Karnataka, India</p>
+            <p>📞 +91 98765 43210</p>
+            <p>✉ info@sunrisegoldenfields.com</p>
+        </div>
+
+
+        <div>
+            <h3>Follow Us</h3>
+            <div class="social">
+                ● ◎ ▶ in
+            </div>
+            <p style="margin-top:12px;font-family:Georgia,serif;">
+                Grow Green 🌱<br>
+                Live Clean
+            </p>
+        </div>
+
+    </div>
+
+
+    <div class="copyright">
+        © 2025 Sunrise GoldenFields. All Rights Reserved.
+    </div>
+
+</footer>
+
+</body>
+</html>
